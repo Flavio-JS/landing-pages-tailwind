@@ -40,7 +40,7 @@ export const SecondSection = () => {
               </div>
             ))}
           </div>
-          <Button className="w-fit border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400">
+          <Button className="w-fit border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400 focus-visible:ring-[#50B2EA]">
             Help me
           </Button>
         </div>
@@ -115,7 +115,7 @@ export const SecondSection = () => {
               </div>
             ))}
           </div>
-          <Button className="w-fit border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400">
+          <Button className="w-fit border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400 focus-visible:ring-[#50B2EA]">
             Help me
           </Button>
         </div>

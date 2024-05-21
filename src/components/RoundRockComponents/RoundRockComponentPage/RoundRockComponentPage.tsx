@@ -3,6 +3,8 @@ import { Banner } from "../Banner/Banner";
 import { FirstSection } from "../FirstSection/FirstSection";
 import { SecondSection } from "../SecondSection/SecondSection";
 import { ThirdSection } from "../ThirdSection/ThirdSection";
+import { FourthSection } from "@/components/RoundRockComponents/FourthSection/FourthSection";
+import { Footer } from "@/components/RoundRockComponents/Footer/Footer";
 
 export const RoundRockComponentPage: NextPage = () => {
   return (
@@ -11,6 +13,8 @@ export const RoundRockComponentPage: NextPage = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <FourthSection />
+      <Footer />
     </div>
   );
 };

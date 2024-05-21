@@ -11,7 +11,7 @@ export const FirstSection = () => {
       className="flex h-full max-h-[80vh] min-h-[500px] w-full flex-col items-center justify-center gap-4 p-4 text-white md:max-h-[60vh]"
     >
       <Carousel />
-      <Button className="border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400">
+      <Button className="border-2 border-solid border-[#F2F2F2] bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400 focus-visible:ring-[#50B2EA]">
         Help me
       </Button>
     </div>

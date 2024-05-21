@@ -11,8 +11,8 @@ export const ThirdSection = () => {
           <Card key={index} className="flex w-full max-w-[500px] gap-4 p-7">
             <div>
               <Avatar>
-                <AvatarImage src="/imgs/user.png" alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarImage src="/imgs/user.png" alt="user.png" />
+                <AvatarFallback>CH</AvatarFallback>
               </Avatar>
             </div>
             <div className="flex flex-col gap-2">

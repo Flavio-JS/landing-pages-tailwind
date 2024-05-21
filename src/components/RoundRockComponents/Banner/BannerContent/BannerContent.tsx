@@ -35,7 +35,7 @@ export const BannerContent = () => {
           <span>Service 3</span>
         </div>
       </div>
-      <Button className="bg-[#50B2EA] px-14 py-5 transition-colors  hover:bg-blue-400">
+      <Button className="bg-[#50B2EA] px-14 py-5 transition-colors hover:bg-blue-400  focus-visible:ring-[#50B2EA]">
         Help me
       </Button>
     </div>
