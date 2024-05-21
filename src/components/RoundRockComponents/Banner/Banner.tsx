@@ -1,4 +1,4 @@
-import { BannerContent } from "../BannerContent/BannerContent";
+import { BannerContent } from "./BannerContent/BannerContent";
 
 export const Banner = () => {
   return (
