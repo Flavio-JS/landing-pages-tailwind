@@ -15,7 +15,7 @@ export const SecondSection = () => {
           className="flex h-full flex-col items-center justify-center gap-8 bg-cover p-4 "
           style={{
             position: "relative",
-            backgroundImage: "url('/banners/section2.png')",
+            backgroundImage: "url('/banners/plimbing/section2.png')",
             backgroundPosition: "right center",
           }}
         >
@@ -50,7 +50,7 @@ export const SecondSection = () => {
           className="flex h-full flex-col items-center justify-center gap-8 bg-cover p-4 "
           style={{
             position: "relative",
-            backgroundImage: "url('/banners/section2.png')",
+            backgroundImage: "url('/banners/plimbing/section2.png')",
             backgroundPosition: "right center",
           }}
         >
@@ -86,7 +86,7 @@ export const SecondSection = () => {
           className="flex h-full flex-col items-center justify-center gap-8 bg-cover p-4 "
           style={{
             position: "relative",
-            backgroundImage: "url('/banners/section2.png')",
+            backgroundImage: "url('/banners/plimbing/section2.png')",
             backgroundPosition: "right center",
           }}
         >

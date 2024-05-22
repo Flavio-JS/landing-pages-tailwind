@@ -1,7 +1,7 @@
 import { Icons } from "@/components/Icons/Icons";
 import { Button } from "@/components/ui/button";
 
-export const BannerContent = () => {
+export const PlimbingBannerContent = () => {
   return (
     <div className="flex h-svh w-full flex-col items-center justify-center gap-9 p-4 text-white">
       <div className="flex gap-4">
