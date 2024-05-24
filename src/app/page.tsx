@@ -9,6 +9,9 @@ export default function Home() {
       <Link href="/bicyclerepair" className="text-blue-700 hover:text-blue-950">
         Bicyclerepair Page
       </Link>
+      <Link href="/dota2" className="text-blue-700 hover:text-blue-950">
+        Dota 2 Page
+      </Link>
     </div>
   );
 }

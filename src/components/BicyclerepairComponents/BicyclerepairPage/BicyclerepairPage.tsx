@@ -4,7 +4,7 @@ import { Banner } from "@/components/Banner/Banner";
 import { BicyclerepairBannerContent } from "@/components/BicyclerepairComponents/BicyclerepairBannerContent/BicyclerepairBannerContent";
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 
-export const BicyclerepairComponentPage = () => {
+export const BicyclerepairPage = () => {
   const size = useWindowSize();
   const backgroundPosition =
     size.width && size.width < 640 ? "right center" : "left center";

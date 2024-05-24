@@ -7,7 +7,7 @@ import { FourthSection } from "@/components/PlimbingComponents/FourthSection/Fou
 import { Footer } from "@/components/PlimbingComponents/Footer/Footer";
 import { PlimbingBannerContent } from "../PlimbingBannerContent/PlimbingBannerContent";
 
-export const PlimbingComponentPage: NextPage = () => {
+export const PlimbingPage: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center ">
       <Banner

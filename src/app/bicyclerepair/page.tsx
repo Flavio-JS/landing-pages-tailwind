@@ -1,5 +1,3 @@
-import { BicyclerepairComponentPage } from "@/components/BicyclerepairComponents/BicyclerepairComponentPage/BicyclerepairComponentPage";
+import { BicyclerepairPage } from "@/components/BicyclerepairComponents/BicyclerepairPage/BicyclerepairPage";
 
-export default function BicyclerepairPage() {
-  return <BicyclerepairComponentPage />;
-}
+export default BicyclerepairPage;

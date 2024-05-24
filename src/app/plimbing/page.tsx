@@ -1,5 +1,3 @@
-import { PlimbingComponentPage } from "@/components/PlimbingComponents/PlimbingComponentPage/PlimbingComponentPage";
+import { PlimbingPage } from "@/components/PlimbingComponents/PlimbingPage/PlimbingPage";
 
-export default function PlimbingPage() {
-  return <PlimbingComponentPage />;
-}
+export default PlimbingPage;
