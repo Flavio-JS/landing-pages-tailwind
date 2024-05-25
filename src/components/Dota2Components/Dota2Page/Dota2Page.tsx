@@ -12,11 +12,13 @@ export const Dota2Page = () => {
         backgroundPosition: "center center",
       }}
     >
-      <div className="flex flex-col gap-8 overflow-y-auto px-10">
-        <Dota2HeroesHeader />
-        <Dota2HeroesFilter />
-        <Dota2HeroCards />
-        <Dota2Footer />
+      <div className="flex w-full justify-center overflow-y-auto px-10">
+        <div className="flex w-full max-w-screen-xl flex-col gap-8">
+          <Dota2HeroesHeader />
+          <Dota2HeroesFilter />
+          <Dota2HeroCards />
+          <Dota2Footer />
+        </div>
       </div>
     </div>
   );

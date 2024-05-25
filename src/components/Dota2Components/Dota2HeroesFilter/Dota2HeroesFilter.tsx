@@ -48,15 +48,21 @@ const toggleComplexityData: FilterProps[] = [
 
 export const Dota2HeroesFilter = () => {
   return (
-    <div className="flex w-full max-w-screen-xl flex-col items-center justify-between gap-4 rounded-md border border-[#11111190] bg-gradient-to-r from-black/50 to-black/30 p-2.5 shadow-[0px_0px_30px_#00000050]">
-      <span className="text-sm text-[#ddd]">FILTRAR HEROIS</span>
-      <div className="flex flex-col items-center justify-center gap-2">
+    <div className="flex w-full max-w-screen-xl flex-col items-center justify-between gap-4 rounded-md border border-[#11111190] bg-gradient-to-r from-black/50 to-black/30 p-2.5 shadow-[0px_0px_30px_#00000050] md:flex-row">
+      <span className="text-nowrap text-sm text-[#ddd] md:text-base lg:text-lg">
+        FILTRAR HEROIS
+      </span>
+      <div className="flex flex-col items-center justify-center gap-2 md:w-full md:flex-row md:justify-around">
         <div className="flex items-center">
-          <span className="mr-2 text-xs text-[#808fa6]">ATRIBUTO</span>
+          <span className="mr-2 text-xs text-[#808fa6] md:text-sm lg:text-base">
+            ATRIBUTO
+          </span>
           <ToggleFilter data={toggleAttributesData} />
         </div>
         <div className="flex items-center">
-          <span className="mr-2 text-xs text-[#808fa6]">COMPLEXIDADE</span>
+          <span className="mr-2 text-xs text-[#808fa6] md:text-sm lg:text-base">
+            COMPLEXIDADE
+          </span>
           <ToggleFilter data={toggleComplexityData} />
         </div>
       </div>

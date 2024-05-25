@@ -20,7 +20,7 @@ export function ToggleFilter({ data }: ToggleFilterProps) {
           aria-label={item.valueItem}
         >
           <div
-            className="transition-filter -ml-1 h-4 w-5 cursor-pointer bg-cover bg-no-repeat filter duration-100 ease-in-out"
+            className="transition-filter -ml-1 h-4 w-5 cursor-pointer bg-cover bg-no-repeat filter duration-100 ease-in-out lg:h-6 lg:w-8"
             style={{
               backgroundImage: `url('${item.imgUrl}')`,
             }}
