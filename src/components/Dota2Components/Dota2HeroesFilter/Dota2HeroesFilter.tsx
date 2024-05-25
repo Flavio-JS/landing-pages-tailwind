@@ -1,5 +1,6 @@
+import { Input } from "@/components/ui/input";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Search } from "lucide-react";
-import { Dota2InputIcon } from "../Dota2InputIcon/Dota2InputIcon";
 import {
   FilterProps,
   ToggleFilter,
@@ -46,7 +47,13 @@ const toggleComplexityData: FilterProps[] = [
   },
 ];
 
-export const Dota2HeroesFilter = () => {
+export type Dota2HeroesFilterProps = {
+  handleChangeName: (data: string) => void;
+};
+
+export const Dota2HeroesFilter = ({
+  handleChangeName,
+}: Dota2HeroesFilterProps) => {
   return (
     <div className="flex w-full max-w-screen-xl flex-col items-center justify-between gap-4 rounded-md border border-[#11111190] bg-gradient-to-r from-black/50 to-black/30 p-2.5 shadow-[0px_0px_30px_#00000050] md:flex-row">
       <span className="text-nowrap text-sm text-[#ddd] md:text-base lg:text-lg">
@@ -57,16 +64,59 @@ export const Dota2HeroesFilter = () => {
           <span className="mr-2 text-xs text-[#808fa6] md:text-sm lg:text-base">
             ATRIBUTO
           </span>
-          <ToggleFilter data={toggleAttributesData} />
+          <ToggleGroup size="sm" type="single">
+            {toggleAttributesData.map((item) => (
+              <ToggleGroupItem
+                key={item.valueItem}
+                className="h-fit px-0 hover:bg-transparent data-[state=on]:bg-transparent data-[state=off]:brightness-50 data-[state=on]:brightness-100 data-[state=off]:saturate-0 data-[state=on]:saturate-100"
+                value={item.valueItem}
+                aria-label={item.valueItem}
+              >
+                <div
+                  className="transition-filter -ml-1 h-4 w-5 cursor-pointer bg-cover bg-no-repeat filter duration-100 ease-in-out lg:h-6 lg:w-8"
+                  style={{
+                    backgroundImage: `url('${item.imgUrl}')`,
+                  }}
+                />
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
         </div>
+
         <div className="flex items-center">
           <span className="mr-2 text-xs text-[#808fa6] md:text-sm lg:text-base">
             COMPLEXIDADE
           </span>
-          <ToggleFilter data={toggleComplexityData} />
+
+          <ToggleGroup size="sm" type="single">
+            {toggleComplexityData.map((item) => (
+              <ToggleGroupItem
+                key={item.valueItem}
+                className="h-fit px-0 hover:bg-transparent data-[state=on]:bg-transparent data-[state=off]:brightness-50 data-[state=on]:brightness-100 data-[state=off]:saturate-0 data-[state=on]:saturate-100"
+                value={item.valueItem}
+                aria-label={item.valueItem}
+              >
+                <div
+                  className="transition-filter -ml-1 h-4 w-5 cursor-pointer bg-cover bg-no-repeat filter duration-100 ease-in-out lg:h-6 lg:w-8"
+                  style={{
+                    backgroundImage: `url('${item.imgUrl}')`,
+                  }}
+                />
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
         </div>
       </div>
-      <Dota2InputIcon icon={<Search color="#ddd" />} />
+      <div className="relative flex w-full min-w-[185px] max-w-64 items-center justify-center">
+        <div className="absolute left-1">
+          <Search color="#ddd" />
+        </div>
+        <Input
+          className="h-7 border-none bg-[#25282a] p-1 pl-8 text-[#ddd] focus-visible:ring-0 focus-visible:ring-offset-0"
+          placeholder="Nome do herói"
+          onChange={({ target }) => handleChangeName(target.value)}
+        />
+      </div>
     </div>
   );
 };

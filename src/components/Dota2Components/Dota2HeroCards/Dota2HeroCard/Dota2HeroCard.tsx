@@ -1,18 +1,23 @@
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export type Dota2HeroCardProps = {
   heroName: string;
   heroAttribute: string;
+  heroId: number;
 };
 
 export const Dota2HeroCard = ({
   heroName,
   heroAttribute,
+  heroId,
 }: Dota2HeroCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [zIndex, setZIndex] = useState(0);
+
+  const router = useRouter();
 
   const handleCardMouseEnter = () => {
     setIsHovered(true);
@@ -48,9 +53,16 @@ export const Dota2HeroCard = ({
 
   return (
     <div
-      className="relative h-[70px] w-full overflow-hidden bg-white transition-transform duration-300 ease-in-out hover:scale-125 sm:h-[100px] md:h-[120px] lg:h-[140px]"
+      className="relative h-[70px] w-full overflow-hidden bg-white transition-transform duration-300 ease-in-out hover:scale-125 hover:cursor-pointer sm:h-[100px] md:h-[120px] lg:h-[140px]"
+      tabIndex={0}
       onMouseEnter={handleCardMouseEnter}
       onMouseLeave={handleCardMouseLeave}
+      onClick={() => router.push(`/dota2/${heroId}`)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          router.push(`/dota2/${heroId}`);
+        }
+      }}
       style={{
         backgroundImage: `url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/${heroName}.png')`,
         backgroundPosition: "center center",
